@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body1 {
+            width: 400px;
+            height: 100px;
+            border: 1px solid #bbb;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .left {
+            float: left;
+            width: 45%;
+            height: 100px;
+            color: #bbb;
+            line-height: 180px;
+            background-color: white;
+            background-image: linear-gradient(to right, transparent 9px, #bbb 1px), linear-gradient(to bottom, transparent 0%, transparent 25%, #eee 50%, transparent 75%, transparent 100%);
+            background-position: left top;
+            background-size: 10px 10px, 100%;
+            background-repeat: repeat-x;
+        }
+
+        .right {
+            float: right;
+            width: 45%;
+            height: 100px;
+            background-color: lightgoldenrodyellow;
+            background-image: linear-gradient(to right, transparent 9px, #bbb 1px), linear-gradient(to bottom, transparent 0%, transparent 25%, #eee 50%, transparent 75%, transparent 100%);
+            background-position: left top;
+            background-size: 10px 10px, 100%;
+            background-repeat: repeat-x;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .object {
+            width: 50px;
+            height: 70px;
+            border: 1px solid #bbb;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-485%, -50%);
+            background-image: linear-gradient(to bottom, #fff 0%, #eee 25%, #eee 50%, #eee 75%, #fff 100%);
+        }
+
+        .object::before {
+            content: "";
+            width: 40px;
+            height: 100px;
+            border: 1px solid #bbb;
+            border-radius: 10%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-160%, -50%);
+            background-image: linear-gradient(to bottom, #fff 0%, #eee 25%, #eee 50%, #eee 75%, #fff 100%);
+        }
+
+        .object::after {
+            content: "";
+            width: 50px;
+            height: 70px;
+            border: 1px solid #bbb;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translate(920%, -50%);
+            background-image: linear-gradient(to bottom, #fff 0%, #eee 25%, #eee 50%, #eee 75%, #fff 100%);
+        }
+
+        .tip {
+            width: 150px;
+            height: 0.1px;
+            border: 1px solid #aaa;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(166%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="body1 clearfix">
+        <div class="left">Made in Taiwan</div>
+        <div class="right"><br></div>
+        <div class="object"></div>
+        <div class="tip"></div>
+    </div>
+</body>
+
+</html>
